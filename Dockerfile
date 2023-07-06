@@ -43,3 +43,13 @@ RUN jenkins-plugin-cli --plugins "blueocean docker-workflow"
 
 #---- UNLOCK JENKINS (ONLY DONE 1 TIME)
 #docker exec <image-name> cat /var/jenkins_home/secrets/initialAdminPassword
+
+
+#---- access filesystem inside the image
+#docker exec -it <image-name> bash
+
+#---- jenkins lives on /var/jenkins_home inside the docker image
+#cd /var/jenkins_home
+
+#---- workspaces live on /var/jenkins_home/workspace
+
